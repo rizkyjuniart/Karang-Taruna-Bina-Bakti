@@ -32,6 +32,7 @@ st.set_page_config(
     page_title="Karang Taruna Bina Bakti",
     page_icon=PAGE_ICON,
     layout="wide",
+    initial_sidebar_state="collapsed",
 )
 
 
@@ -330,21 +331,106 @@ st.markdown(
     }}
 
     @media screen and (max-width: 768px) {{
+        .block-container {{
+            padding: 1rem 0.9rem 1.5rem 0.9rem;
+            max-width: 100%;
+        }}
+
+        section[data-testid="stSidebar"] {{
+            width: min(82vw, 320px) !important;
+            min-width: min(82vw, 320px) !important;
+        }}
+
+        .sidebar-brand {{
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+        }}
+
+        .sidebar-logo {{
+            width: 105px;
+            margin-bottom: 10px;
+        }}
+
+        .sidebar-title-small {{
+            font-size: 14px;
+        }}
+
+        .sidebar-title-big {{
+            font-size: 20px;
+        }}
+
+        div[data-testid="stHorizontalBlock"] {{
+            flex-wrap: wrap;
+            gap: 1rem;
+        }}
+
+        div[data-testid="column"] {{
+            width: 100% !important;
+            min-width: 100% !important;
+            flex: 1 1 100% !important;
+        }}
+
         .hero {{
-            padding: 40px 25px;
-            min-height: 330px;
+            padding: 34px 20px;
+            min-height: 360px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            background-position: center;
         }}
 
         .hero h1 {{
-            font-size: 36px;
+            font-size: 34px;
+            line-height: 1.12;
         }}
 
         .hero p {{
             font-size: 16px;
+            line-height: 1.55;
+        }}
+
+        .badge {{
+            font-size: 12px;
+            padding: 8px 12px;
         }}
 
         .section-title h2 {{
-            font-size: 28px;
+            font-size: 27px;
+            line-height: 1.2;
+        }}
+
+        .card,
+        .program-card,
+        .timeline,
+        .team-card {{
+            min-height: auto;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 4px;
+        }}
+
+        .card h3,
+        .program-card h3,
+        .timeline h3,
+        .team-card h3 {{
+            font-size: 22px;
+            line-height: 1.2;
+            word-break: normal;
+            overflow-wrap: normal;
+        }}
+
+        .card p,
+        .card li,
+        .program-card p,
+        .timeline p {{
+            font-size: 15px;
+            line-height: 1.65;
+        }}
+
+        .footer {{
+            padding: 18px;
+            border-radius: 16px;
+            margin-top: 26px;
+            font-size: 13px;
         }}
     }}
     </style>
